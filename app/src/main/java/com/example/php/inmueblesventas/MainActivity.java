@@ -15,9 +15,11 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity  {
 
-    ImageView IMG_CONTAINER;
+    /*ImageView IMG_CONTAINER;
     private int MEDIA_CODE =123;
-    private int CAMERA_CODE = 123;
+    private int CAMERA_CODE = 123;*/
+    private int BTN_REG;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,17 +34,22 @@ public class MainActivity extends AppCompatActivity  {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
             }
         });*/
+
         LoadComponents();
     }
 
     private void LoadComponents() {
-        Button media = (Button)this.findViewById((R.id.media));
-        Button foto = (Button)this.findViewById((R.id.media));
+        //Button media = (Button)this.findViewById((R.id.media));
+        //Button foto = (Button)this.findViewById((R.id.media));
 
-        IMG_CONTAINER= (ImageView)this.findViewById(R.id.photoView);
+       /* Button btn_reg = (Button) findViewById(R.id.btn_reg);
+        btn_reg.setOnClickListener(this);*/
 
-     //   media.setOnClickListener(this);
-      //  media.setOnClickListener((this));
+        // IMG_CONTAINER= (ImageView)this.findViewById(R.id.photoView);
+
+
+        //   media.setOnClickListener(this);
+        //  media.setOnClickListener((this));
 
     }
 
@@ -67,19 +74,27 @@ public class MainActivity extends AppCompatActivity  {
 
         return super.onOptionsItemSelected(item);
     }
-   /* @Override
-    public void onClick(View v) {
+}
+/*
+    @Override
+    public void onClick(View v)
 
-        if( v.getId()== R.id.media){
+        if (v.getId()== R.id.btn_reg)
+        {
+            setContentView(R.layout.registrar_usuario);
+        }
+  /*      if( v.getId()== R.id.media){
             LoadMediaDarta();
 
         }
         if( v.getId()== R.id.media){
             LoadCamaraData();
-        }
-    }
+        }*/
+
     //MEDIA DARTA Y CAMAR ENTRA A OVERRIDE QUE es activity result
-    private void LoadMediaDarta() {
+
+
+   /* private void LoadMediaDarta() {
 
         Intent media = new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
         media.setType("image/");
@@ -102,4 +117,6 @@ public class MainActivity extends AppCompatActivity  {
             //ALGO MAS
         }
     }*/
-}
+
+
+
